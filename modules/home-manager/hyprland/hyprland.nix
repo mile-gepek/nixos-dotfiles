@@ -56,6 +56,8 @@ in
           "$mod, M, exit"
           "$mod, E, exec, nautilus"
           "$mod, V, togglefloating"
+          "$mod SHIFT, S, exec, hyprshot -m region"
+          ", Print, exec, hyprshit -m output"
         ] ++ (
           builtins.concatLists (builtins.genList (
             x: let
@@ -93,6 +95,7 @@ in
         env = [
           "HYPRCURSOR_THEME, Bibata-Modern-Classis"
           "HYPRCURSOR_SIZE, 24"
+          "HYPRSHOT_DIR, '~/Pictures/Screenshots'"
         ];
 
         exec-once = [

@@ -115,6 +115,8 @@
     pkgs.rofi-wayland
     pkgs.pavucontrol
     pkgs.roboto
+    pkgs.hyprshot
+    pkgs.htop
     # pkgs.kdePackages.dolphin
   ];
 
