@@ -18,10 +18,18 @@ in
         theme = "custom";
         editor = {
           line-number = "relative";
+          completion-replace = true;
+          preview-completion-insert = false;
+          color-modes = true;
           cursor-shape = {
             insert = "bar";
             normal = "block";
             select = "underline";
+          };
+          
+          indent-guides = {
+            render = true;
+            character = "╎";
           };
 
           end-of-line-diagnostics = "hint";
