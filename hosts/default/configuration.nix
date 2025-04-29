@@ -120,6 +120,7 @@
     pkgs.hyprshot
     pkgs.htop
     pkgs.discord
+    # pkgs.cloc
     # pkgs.kdePackages.dolphin
   ];
 

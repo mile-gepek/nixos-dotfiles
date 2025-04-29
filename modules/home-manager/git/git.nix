@@ -12,7 +12,7 @@ in
   config = {
     programs.git = lib.mkIf cfg.git.enable {
       enable = true;
-      userName = "ontley";
+      userName = "leo";
       userEmail = "theontley@gmail.com";
     };
 
