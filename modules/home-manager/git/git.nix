@@ -12,8 +12,8 @@ in
   config = {
     programs.git = lib.mkIf cfg.git.enable {
       enable = true;
-      userName = (builtins.readFile ./username);
-      userEmail = (builtins.readFile ./useremail);
+      userName = "mile gepek";
+      userEmail = "theontley@gmail.com";
     };
 
     programs.lazygit = lib.mkIf cfg.lazygit.enable {

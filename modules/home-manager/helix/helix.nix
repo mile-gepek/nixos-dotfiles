@@ -15,7 +15,7 @@ in
       defaultEditor = true;
 
       settings = {
-        theme = "custom";
+        theme = "gruvbox-material-no-background";
         editor = {
           line-number = "relative";
           completion-replace = true;
@@ -141,6 +141,7 @@ in
           "ui.virtual.indent-guide" = { fg = gray4; };
           "ui.virtual.ruler" = { bg = gray6; };
         };
+      gruvbox-material-no-background = lib.importTOML ./themes/gruvbox_material_no_background.toml;
       };
     };
   };
