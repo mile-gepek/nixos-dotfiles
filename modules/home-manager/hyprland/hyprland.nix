@@ -53,11 +53,13 @@ in
           "$mod, Return, exec, ghostty"
           "$mod, R, exec, rofi -show drun"
           "$mod, Q, killactive"
-          "$mod, M, exit"
+          "$mod SHIFT CTRL, Q, exit"
           "$mod, E, exec, nautilus"
           "$mod, V, togglefloating"
           "$mod, J, togglesplit"
           "$mod SHIFT, S, exec, hyprshot -m region"
+          "$mod, M, togglespecialworkspace, magic"
+          "$mod SHIFT, M, movetoworkspace, special:magic"
           ", Print, exec, hyprshit -m output"
         ] ++ (
           builtins.concatLists (builtins.genList (
@@ -96,7 +98,7 @@ in
         env = [
           "HYPRCURSOR_THEME, Bibata-Modern-Classis"
           "HYPRCURSOR_SIZE, 24"
-          "HYPRSHOT_DIR, '~/Pictures/Screenshots'"
+          "HYPRSHOT_DIR, ~/Pictures/Screenshots"
         ];
 
         exec-once = [
