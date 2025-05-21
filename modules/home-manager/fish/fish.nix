@@ -22,7 +22,7 @@ in
       '';
       shellAliases = {
         nixsh = "nix-shell --command $SHELL";
-        nixdev = "nix-develop --command $SHELL";
+        nixdev = "nix develop --command $SHELL";
         lg = "lazygit";
       };
     };
