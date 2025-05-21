@@ -21,7 +21,9 @@ in
         starship init fish | source
       '';
       shellAliases = {
-        nix-shell = "nix-shell --run fish";
+        nixsh = "nix-shell --command $SHELL";
+        nixdev = "nix-develop --command $SHELL";
+        lg = "lazygit";
       };
     };
   };
