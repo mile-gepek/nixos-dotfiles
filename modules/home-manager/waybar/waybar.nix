@@ -51,8 +51,8 @@ in {
         };
 
         clock = {
-          format = "{:%Y-%m-%d | %H:%M}";
-          format-alt = "{:%Y-%m-%d}";
+          format = "{:%d.%m.%Y | %H:%M}";
+          format-alt = "{:%d.%m.%Y}";
         };
 
         network = {
