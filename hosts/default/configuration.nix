@@ -123,6 +123,8 @@
     pkgs.cloc
     pkgs.tree
     pkgs.nil
+    pkgs.safeeyes
+    pkgs.chromium
     # pkgs.kdePackages.dolphin
   ];
 
@@ -137,16 +139,20 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  services.openssh = {
-    enable = true;
-    ports = [ 22 ];
-    settings = {
-      PasswordAuthentication = true;
-      AllowUsers = [ "leo" ];
-      UseDns = true;
-      X11Forwarding = false;
-      PermitRootLogin = "prohibit-password";
+  services = {
+    openssh = {
+      enable = true;
+      ports = [ 22 ];
+      settings = {
+        PasswordAuthentication = true;
+        AllowUsers = [ "leo" ];
+        UseDns = true;
+        X11Forwarding = false;
+        PermitRootLogin = "prohibit-password";
+      };
     };
+
+    safeeyes.enable = true;
   };
 
   # Open ports in the firewall.
