@@ -151,8 +151,6 @@
         PermitRootLogin = "prohibit-password";
       };
     };
-
-    safeeyes.enable = true;
   };
 
   # Open ports in the firewall.
