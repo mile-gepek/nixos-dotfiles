@@ -51,19 +51,9 @@ in
           {
             name = "python";
             language-servers = [ "ruff" "pyright" ];
+            auto-format = true;
           }
         ];
-
-        language-server = {
-          ruff = {
-            command = "ruff";
-            args = [ "server" ];
-          };
-          pyright = {
-            command = "pyright-langserver";
-            args = [ "--stdio" ];
-          };
-        };
       };
     };
   };
