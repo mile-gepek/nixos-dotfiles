@@ -45,6 +45,26 @@ in
           "ui.background" = { };
         };
       };
+
+      languages = {
+        language = [
+          {
+            name = "python";
+            language-servers = [ "ruff" "pyright" ];
+          }
+        ];
+
+        language-server = {
+          ruff = {
+            command = "ruff";
+            args = [ "server" ];
+          };
+          pyright = {
+            command = "pyright-langserver";
+            args = [ "--stdio" ];
+          };
+        };
+      };
     };
   };
 }
