@@ -13,7 +13,7 @@ in
       enable = true;
       enableFishIntegration = true;
       settings = {
-        font-family = "\"Monaspace Neon Frozen\"";
+        font-family = "\"Monaspace Neon Var\"";
         font-style = "\"SemiBold\"";
         font-style-bold = "\"Bold\"";
         font-style-italic = "\"SemiBold Italic\"";
