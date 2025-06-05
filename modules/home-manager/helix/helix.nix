@@ -50,7 +50,7 @@ in
         language = [
           {
             name = "python";
-            language-servers = [ "ruff" "pyright" ];
+            language-servers = [ "ruff" "basedpyright" ];
             auto-format = true;
           }
         ];
