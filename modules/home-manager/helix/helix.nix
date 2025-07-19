@@ -52,6 +52,26 @@ in
             name = "python";
             language-servers = [ "ruff" "basedpyright" ];
             auto-format = true;
+            debugger = {
+              name = "debugpy";
+              transport = "stdio";
+              command = "python";
+              args = [ "-m" "debugpy.adapter" ];
+              templates = [
+                  {
+                  name = "module";
+                  request = "launch";
+                  # completion = [
+                  #   { name = "module"; completion = "directory"; default = "."; }
+                  #   # filename/directory autocompletions are canonicalized which breaks debuggers when trying to debug modules
+                  # ];
+                  args = {
+                    mode = "debug";
+                    module = "absolute_unit";
+                  };
+                }
+              ];
+            };
           }
         ];
       };
