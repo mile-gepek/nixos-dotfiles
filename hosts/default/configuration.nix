@@ -67,6 +67,12 @@
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
+
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -111,20 +117,21 @@
   
   environment.systemPackages = with pkgs; [
     wget
-    pkgs.helix
-    pkgs.ghostty
-    pkgs.fish
-    pkgs.rofi-wayland
-    pkgs.pavucontrol
-    pkgs.roboto
-    pkgs.hyprshot
-    pkgs.htop
-    pkgs.discord
-    pkgs.cloc
-    pkgs.tree
-    pkgs.nil
-    pkgs.safeeyes
-    pkgs.chromium
+    helix
+    ghostty
+    fish
+    rofi-wayland
+    pavucontrol
+    roboto
+    hyprshot
+    htop
+    discord
+    cloc
+    tree
+    nil
+    safeeyes
+    chromium
+    vscode
     # pkgs.kdePackages.dolphin
   ];
 
