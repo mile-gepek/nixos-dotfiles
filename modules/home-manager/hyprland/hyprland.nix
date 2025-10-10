@@ -54,17 +54,17 @@ in
           "$mod, R, exec, rofi -show drun"
           "$mod, Q, killactive"
           "$mod SHIFT CTRL, Q, exit"
-          "$mod, E, exec, nautilus"
+          "$mod, E, exec, dolphin"
           "$mod, V, togglefloating"
           "$mod, T, togglesplit"
           "$mod, J, movefocus, l"
           "$mod, K, movefocus, u"
           "$mod, L, movefocus, d"
           "$mod, L, movefocus, r"
-          "$mod SHIFT, S, exec, hyprshot -m region"
           "$mod, M, togglespecialworkspace, magic"
           "$mod SHIFT, M, movetoworkspace, special:magic"
-          ", Print, exec, hyprshit -m output"
+          "$mod SHIFT, S, exec, hyprshot -m region"
+          ", Print, exec, hyprshot -m output"
         ] ++ (
           builtins.concatLists (builtins.genList (
             x: let
@@ -102,7 +102,7 @@ in
         env = [
           "HYPRCURSOR_THEME, Bibata-Modern-Classis"
           "HYPRCURSOR_SIZE, 24"
-          "HYPRSHOT_DIR, ~/Pictures/Screenshots"
+          "HYPRSHOT_DIR, Pictures/Screenshots"
         ];
 
         exec-once = [
@@ -115,6 +115,13 @@ in
           "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
           "float,class:^(safeeyes)$"
         ];
+      };
+    };
+    services.hyprpaper = {
+      enable = true;
+      settings = {
+        preload = [ "~/wallpapers/mountains.jpg" ];
+        wallpaper = [ "DP-1,~/wallpapers/mountains.jpg" ];
       };
     };
   };
