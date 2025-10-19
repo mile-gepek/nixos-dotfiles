@@ -120,7 +120,7 @@
     helix
     ghostty
     fish
-    rofi-wayland
+    rofi
     pavucontrol
     roboto
     hyprshot
