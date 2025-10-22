@@ -11,7 +11,6 @@ in
   config = lib.mkIf cfg.enable {
     programs.starship = {
       enable = true;
-      enableFishIntegration = true;
     };
 
     programs.fish = {
@@ -25,6 +24,11 @@ in
         nixdev = "nix develop --command $SHELL";
         lg = "lazygit";
       };
+    };
+
+    programs.direnv = {
+      enable = true;
+      nix-direnv.enable = true;
     };
   };
 }

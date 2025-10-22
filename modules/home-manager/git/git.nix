@@ -14,6 +14,10 @@ in
       enable = true;
       userName = "mile gepek";
       userEmail = "theontley@gmail.com";
+      ignores = [
+        ".direnv"
+        ".envrc"
+      ];
     };
 
     programs.lazygit = lib.mkIf cfg.lazygit.enable {
