@@ -18,9 +18,8 @@ in
         theme = "gruvbox-material-no-background";
         editor = {
           line-number = "relative";
-          completion-replace = true;
-          preview-completion-insert = false;
           color-modes = true;
+          rainbow-brackets = true;
           cursor-shape = {
             insert = "bar";
             normal = "block";
@@ -29,7 +28,7 @@ in
           
           indent-guides = {
             render = true;
-            character = "╎";
+            character = "┊";
           };
 
           end-of-line-diagnostics = "hint";
