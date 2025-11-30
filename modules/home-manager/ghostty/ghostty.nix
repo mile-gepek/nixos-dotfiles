@@ -23,6 +23,8 @@ in
       
         adjust-cell-height = "20%";
         background = "#1f1f28";
+
+        gtk-single-instance=false;
       };
     };
   };
