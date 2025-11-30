@@ -120,8 +120,8 @@ in
     services.hyprpaper = {
       enable = true;
       settings = {
-        preload = [ "~/wallpapers/mountains.jpg" ];
-        wallpaper = [ "DP-1,~/wallpapers/mountains.jpg" ];
+        preload = [ "~/wallpapers/wf.png" ];
+        wallpaper = [ "DP-1,~/wallpapers/wf.png" ];
       };
     };
   };
