@@ -72,7 +72,19 @@ in
               ];
             };
           }
+          {
+            name = "html";
+            language-servers = [ "emmet-ls" "superhtml" ];
+          }
+          {
+            name = "css";
+            language-servers = [ "emmet-ls" "vscode-css-languageserver" ];
+          }
         ];
+        language-server.emmet-ls = {
+          command = "emmet-ls";
+          args = [ "--stdio" ];
+        };
       };
     };
   };
