@@ -1,4 +1,4 @@
-{ lib, pkgs, config, ... }:
+{ lib, pkgs, config, inputs, ... }:
 
 let
   cfg = config.ghostty-config;
@@ -11,6 +11,7 @@ in
   config = lib.mkIf cfg.enable {
     programs.ghostty = {
       enable = true;
+      package = inputs.ghostty.packages.${pkgs.stdenv.system}.default;
       enableFishIntegration = true;
       settings = {
         font-family = "\"Monaspace Argon Var\"";

@@ -46,6 +46,10 @@ in
           preserve_split = true;
         };
 
+        layerrule = [
+          "noanim, selection"
+        ];
+
         "$mod" = "ALT";
 
         bind = [
@@ -54,7 +58,7 @@ in
           "$mod, R, exec, rofi -show drun"
           "$mod, Q, killactive"
           "$mod SHIFT CTRL, Q, exit"
-          "$mod, E, exec, dolphin"
+          "$mod, E, exec, nautilus"
           "$mod, V, togglefloating"
           "$mod, T, togglesplit"
           "$mod, J, movefocus, l"
@@ -120,8 +124,8 @@ in
     services.hyprpaper = {
       enable = true;
       settings = {
-        preload = [ "~/wallpapers/wf.png" ];
-        wallpaper = [ "DP-1,~/wallpapers/wf.png" ];
+        preload = [ "~/wallpapers/idk dragon cool.jpeg" ];
+        wallpaper = [ "DP-1,~/wallpapers/idk dragon cool.jpeg" ];
       };
     };
   };

@@ -132,8 +132,10 @@
     safeeyes
     chromium
     vscode
-    pkgs.kdePackages.dolphin
+    nautilus
     wl-clipboard
+    libreoffice-qt
+    networkmanagerapplet
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
