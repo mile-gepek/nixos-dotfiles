@@ -37,7 +37,7 @@ in
           blur.enabled = false;
           shadow.enabled = true;
 
-          rounding = 5;
+          rounding = 10;
           rounding_power = 4.0;
         };
 
@@ -46,25 +46,21 @@ in
           preserve_split = true;
         };
 
-        layerrule = [
-          "noanim, selection"
-        ];
-
         "$mod" = "ALT";
 
         bind = [
           "$mod, W, exec, firefox"
           "$mod, Return, exec, ghostty"
-          "$mod, R, exec, rofi -show drun"
+          "$mod, R, exec, noctalia-shell ipc call launcher toggle"
           "$mod, Q, killactive"
-          "$mod SHIFT CTRL, Q, exit"
+          "$mod SHIFT CTRL, Q, exec, noctalia-shell ipc call sessionMenu toggle"
           "$mod, E, exec, nautilus"
           "$mod, V, togglefloating"
           "$mod, T, togglesplit"
           "$mod, J, movefocus, l"
           "$mod, K, movefocus, u"
           "$mod, L, movefocus, d"
-          "$mod, L, movefocus, r"
+          "$mod, ;, movefocus, r"
           "$mod, M, togglespecialworkspace, magic"
           "$mod SHIFT, M, movetoworkspace, special:magic"
           "$mod SHIFT, S, exec, hyprshot -m region"
@@ -111,21 +107,25 @@ in
 
         exec-once = [
           "hyprctl setcursor Bibata-Modern-Classic 24"
-          "waybar"
+          "noctalia-shell"
         ];
 
         windowrule = [
-          "suppressevent maximize, class:.*"
-          "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
-          "float,class:^(safeeyes)$"
+          "match:class .*, suppress_event maximize"
+          "match:class ^$, match:title ^$, match:xwayland on, no_focus on, float on, fullscreen off, pin off"
+          "match:class ^(safeeyes)$, float on,"
         ];
       };
     };
     services.hyprpaper = {
       enable = true;
       settings = {
-        preload = [ "~/wallpapers/idk dragon cool.jpeg" ];
-        wallpaper = [ "DP-1,~/wallpapers/idk dragon cool.jpeg" ];
+        wallpaper = [
+          {
+            monitor = "DP-1";
+            path = "~/wallpapers/idk dragon cool.jpeg";
+          }
+        ];
       };
     };
   };

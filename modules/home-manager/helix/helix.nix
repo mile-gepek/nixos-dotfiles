@@ -33,7 +33,7 @@ in
 
           end-of-line-diagnostics = "hint";
           inline-diagnostics = {
-            cursor-line = "warning";
+            cursor-line = "hint";
           };
         };
       };
@@ -74,11 +74,11 @@ in
           }
           {
             name = "html";
-            language-servers = [ "emmet-ls" "superhtml" ];
+            language-servers = [ "emmet-ls" "superhtml" "vscode-html-language-server" ];
           }
           {
             name = "css";
-            language-servers = [ "emmet-ls" "vscode-css-languageserver" ];
+            language-servers = [ "emmet-ls" "vscode-css-language-server" ];
           }
         ];
         language-server.emmet-ls = {

@@ -8,7 +8,7 @@
     ./ghostty/ghostty.nix
     ./helix/helix.nix
     ./hyprland/hyprland.nix
-    ./waybar/waybar.nix
+    ./noctalia/noctalia.nix
   ];
   fish-config.enable = true;
   git-config.git.enable = true;
@@ -17,5 +17,5 @@
   helix-config.enable = true;
   hyprland-config.enable = true;
   hyprland-config.layout = "dwindle";
-  waybar-config.enable = true;
+  noctalia-config.enable = true;
 }
