@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, config, ... }:
 
 let
   cfg = config.direnv-config;
@@ -9,8 +9,13 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    programs.direnv = {
-      enable = true;
-    }
-  }
+    programs = {
+      direnv = {
+        enable = true;
+      };
+      devenv = {
+        enable = true;
+      }
+    };
+  };
 }

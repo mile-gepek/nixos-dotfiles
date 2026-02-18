@@ -302,7 +302,7 @@
     "favorites": []
   },
   "appLauncher": {
-    "enableClipboardHistory": false,
+    "enableClipboardHistory": true,
     "autoPasteClipboard": false,
     "enableClipPreview": true,
     "clipboardWrapText": true,
@@ -312,7 +312,7 @@
     "pinnedApps": [],
     "useApp2Unit": false,
     "sortByMostUsed": true,
-    "terminalCommand": "alacritty -e",
+    "terminalCommand": "ghostty",
     "customLaunchPrefixEnabled": false,
     "customLaunchPrefix": "",
     "viewMode": "list",

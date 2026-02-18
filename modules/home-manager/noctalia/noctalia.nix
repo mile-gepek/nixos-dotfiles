@@ -11,7 +11,7 @@ let
 in
 {
   options.noctalia-config = {
-    enable = lib.mkEnableOption "Enable helix config";
+    enable = lib.mkEnableOption "Enable noctalia config";
   };
 
   config = lib.mkIf cfg.enable {
